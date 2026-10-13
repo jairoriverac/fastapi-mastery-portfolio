@@ -1,0 +1,43 @@
+[project]
+name = "fastapi-mastery-portfolio"
+version = "1.0.0"
+description = "Portafolio práctico avanzado de Python, FastAPI, Clean Architecture y OpenRouter"
+readme = "README.md"
+requires-python = ">=3.11"
+
+[tool.ruff]
+target-version = "py312"
+line-length = 100
+exclude = [
+    ".git",
+    ".venv",
+    "__pycache__",
+    "build",
+    "dist",
+    "alembic",
+]
+
+[tool.ruff.lint]
+select = [
+    "E",   # Errores de pycodestyle
+    "W",   # Advertencias de pycodestyle
+    "F",   # Pyflakes (variables no usadas, imports rotos)
+    "I",   # isort (orden automático de imports)
+    "B",   # flake8-bugbear (patrones peligrosos)
+    "UP",  # pyupgrade (modernización automática a Python 3.12+)
+    "FAST",# Reglas específicas de FastAPI
+]
+ignore = ["B008"] # Permite Depends() en los argumentos por defecto de FastAPI
+
+[tool.pytest.ini_options]
+minversion = "8.0"
+testpaths = ["tests", "07_testing_with_pytest"]
+python_files = ["test_*.py", "*_tests.py"]
+asyncio_mode = "auto"
+asyncio_default_fixture_loop_scope = "function"
+
+[tool.mypy]
+python_version = "3.12"
+strict = true
+ignore_missing_imports = true
+plugins = ["pydantic.mypy"]

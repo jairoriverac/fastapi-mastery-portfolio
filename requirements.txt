@@ -1,0 +1,31 @@
+# Core FastAPI y Servidor ASGI
+fastapi[standard]>=0.115.0
+uvicorn[standard]>=0.32.0
+pydantic>=2.10.0
+pydantic-settings>=2.7.0
+
+# Cliente HTTP Asíncrono para LLMs y APIs externas
+httpx>=0.28.0
+
+# Base de Datos Asíncrona y Migraciones
+sqlalchemy>=2.0.36
+asyncpg>=0.30.0
+aiosqlite>=0.20.0
+alembic>=1.14.0
+
+# Seguridad, Hashing y JWT
+pwdlib[argon2]>=0.2.1
+python-jose[cryptography]>=3.3.0
+python-multipart>=0.0.19
+
+# Redis y Rate Limiting
+redis>=5.2.0
+slowapi>=0.1.9
+
+# Testing
+pytest>=8.3.0
+pytest-asyncio>=0.24.0
+
+# Calidad de Código y Tipado
+ruff>=0.8.0
+mypy>=1.13.0
