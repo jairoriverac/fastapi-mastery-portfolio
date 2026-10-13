@@ -105,3 +105,9 @@ fastapi dev 01_python_crash_course/06_hello_fastapi_setup.py
 uvicorn 01_python_crash_course.06_hello_fastapi_setup:app --reload
 ```
 ````
+
+=======
+
+# fastapi-mastery-portfolio
+
+Proyecto de estudio usando python y el framework fastAPI
